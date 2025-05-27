@@ -1,0 +1,254 @@
+@import url(https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css);
+
+@font-face {
+    font-family: 'Great Vibes', cursive;
+    src: url(https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css);
+}
+
+html {
+    overflow-x: hidden; /* Remove a rolagem horizontal */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: auto; /* Permite que o corpo se ajuste ao conteúdo */
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle, #000000, #333333);
+}
+
+.musica {
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 100%;
+    overflow: hidden;
+
+}
+
+.musica iframe{
+width: 100%;
+max-width: 100%;
+border: none;
+display: block;
+}
+
+.musica h1 {
+    color: black;
+    font-family: 'Great Vibes', cursive;
+}
+
+.meu-botao {
+    display: inline-block;
+    background: linear-gradient(135deg, #e60064, #ffb6c1); /* degrade bonito */
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.meu-botao:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    padding: 20px;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#tempo-juntos {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    border: 4px solid #ffb6c1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    color: black;
+}
+
+.box {
+    background: #ffb6c1;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper {
+    position: relative;
+    width: 100%; /* Ajusta a largura para 100% */
+    max-width: 460px; /* Limita a largura máxima */
+    height: 600px; /* Altura padrão */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-slide {
+    position: relative;
+    border: 1px solid white;
+    background-position: center;
+    background-size: cover;
+    user-select: none;
+    border-radius: 15px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 115px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: transparent; /* Fundo transparente */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #ffffff4d;
+    border-radius: 0 0 15px 15px; /* Corrigido para bordas arredondadas */
+}
+
+.overlay h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.intro {
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Conteúdo centralizado */
+.content {
+    background-color: rgb(34, 28, 28); /* Fundo semi-transparente para destacar o texto */
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #ffb6c1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Título */
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f7c6c1; /* Rosa suave */
+}
+
+/* Parágrafos */
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #f1f1f1;
+}
+
+/* Efeito de transição no texto */
+h1, p {
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Animação de fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* Ajusta o tamanho do título para telas menores */
+    }
+    h2 {
+        font-size: 36px; /* Ajusta o tamanho do subtítulo para telas menores */
+    }
+    p {
+        font-size: 1rem; /* Ajusta o tamanho do texto para telas menores */
+    }
+    .content {
+        padding: 20px; /* Reduz o padding para telas menores */
+        width: 90%; /* Garante que o conteúdo não exceda a largura da tela */
+    }
+    .swiper {
+        height: 500px; /* Ajusta a altura do carrossel para telas menores */
+        
+    }
+
+}
+
+@media (max-width: 480px) {
+    h1 { 
+        font-size: 2rem; /* Ajuste extra para telas de celular menores */
+    }
+    h2 {
+        font-size: 28px; /* Ajusta o tamanho do subtítulo para telas muito pequenas */
+    }
+    .content {
+        padding: 15px; /* Ajuste do padding para telas bem pequenas */
+        width: 90%; /* Garante que o conteúdo não exceda a largura da tela */
+    }
+    .swiper {
+        height: 400px; /* Ajusta a altura do carrossel para telas muito pequenas */
+        width: 300px;
+    }
+
+    .overlay {
+        height: 60px;
+    }
+    #tempo-juntos {
+        font-size: 24px; /* Ajusta o tamanho do texto para telas menores */
+        padding: 15px; /* Ajusta o padding para telas menores */
+        width: 90%; /* Garante que o conteúdo não exceda a largura da tela */
+    }
+}
