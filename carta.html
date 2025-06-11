@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Para meu amor,</strong>
+                        <p>
+                            Desde o nosso primeiro beijo, algo em mim já dizia que ficaríamos juntos. Mesmo que eu não adimita, mas o meu coração já sabia.
+
+                        Hoje, ao olhar para você, vejo muito mais do que a mulher que me encantou no início. Vejo a pessoa mais linda, simpática, 
+                        inteligente, carinhosa e — tudo bem, meio engraçada também, vai! 
+                        Mas, acima de tudo, vejo aquela que eu quero ao meu lado para sempre. A mulher com quem sonho construir uma vida, uma casa cheia de amor, filhos lindos, e um futuro incrível.
+                        
+                        A todo momento me pego pensando na nossa história, em como somos conectados de um jeito que só a gente entende. Essa conexão só cresce, se fortalece, e me mostra que estamos exatamente onde deveríamos estar: juntos.
+                        
+                        Criei esse site para você com todo o carinho do mundo. Quis demonstrar meu amor de uma forma diferente, única, especial — como você. Também achei que era justo guardar a nossa história em algum lugar… e que lugar melhor do que a internet, para ser eterno?
+                        
+                        Te amo mais do que palavras podem dizer. Você é tudo pra mim.
+                        E mesmo sem acreditar no acaso, preciso admitir: você foi o acaso mais bonito que poderia ter acontecido na minha vida.
+                    </p>
+                        <p>Com todo o meu amor,</p>
+                        <p>Gustavo.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+
+       
+        function toggleEnvelope() {
+  const wrapper = document.getElementById("envelopeWrapper");
+  wrapper.classList.toggle("open");
+}
+
+    </script>
+</body>
+</html>
